@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.2-web/css/all.css">
@@ -16,8 +18,8 @@
     <!-- Header -->
     <div class="main">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--hqr header__navbar-item--separate">
                             Vào ứng dụng trên F8-Shop
@@ -163,7 +165,44 @@
                 </nav>
     <!-- Header-with-search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <input type="checkbox" hidden name="" id="check-search">
+                    <input type="checkbox" hidden name="" id="check-bars">
+                    <div class="category-mobile">
+                        <h1 class="titlef8-shop">F8-Shop</h1>
+                        <label for="check-bars" class="icon-close-mobile">
+                            <i class="fas fa-times icon-close"></i>
+                        </label>
+                        <ul class="header-categogy__mobile">
+                            <li class="header-categogy__mobile-item">
+                                <a href="" class="header-categogy__mobile-link">  Ứng dụng F8-Shop</a>
+                            </li>
+                            <li class="header-categogy__mobile-item">
+                                <a href="" class="header-categogy__mobile-link">  Thông báo </a>
+                            </li>
+                            <li class="header-categogy__mobile-item">
+                                <a href="" class="header-categogy__mobile-link"> Trợ giúp</a>
+                            </li>
+                            <li class="header-categogy__mobile-item">
+                                <a href="" class="header-categogy__mobile-link">  Đăng nhập</a>
+                            </li>
+                            <li class="header-categogy__mobile-item">
+                                <a href="" class="header-categogy__mobile-link">  Đăng ký</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="btn-mobile">
+                        <label for="check-bars" class="header__bars-mobile">
+                            <i class="fas fa-bars"></i>
+                        </label>
+                        <label for="check-search" class="header__mobile-search">
+                            <i class="fas fa-search header__mobile-search-icon"></i>
+                        </label>
+                    </div>
+
+                    <label for="check-bars" class="oveplsy"></label>
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="/" class="home-page">
                             <svg viewBox="0 0 192 65" class="header__logo-img">
                                 <g fill-rule="evenodd">
@@ -172,6 +211,7 @@
                             </svg>
                         </a>
                     </div>
+
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -246,6 +286,11 @@
                                                     Điện thoại Apple Iphone 12
                                                 </span>
                                                 <span class="header__cart-second-delete">Xóa</span>
+                                                <div class="header__cart-mobile-tablet-delete">
+                                                    <a href="" class="header__cart-mobile-tablet-delete-link">
+                                                        <i class="fas fa-times header__cart-mobile-tablet-delete-icon"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -266,6 +311,11 @@
                                                     Điện thoại Xiaomi Mi 11 5G
                                                 </span>
                                                 <span class="header__cart-second-delete">Xóa</span>
+                                                <div class="header__cart-mobile-tablet-delete">
+                                                    <a href="" class="header__cart-mobile-tablet-delete-link">
+                                                        <i class="fas fa-times header__cart-mobile-tablet-delete-icon"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -286,6 +336,11 @@
                                                     Điện thoại Vsmart Aris Pro
                                                 </span>
                                                 <span class="header__cart-second-delete">Xóa</span>
+                                                <div class="header__cart-mobile-tablet-delete">
+                                                    <a href="" class="header__cart-mobile-tablet-delete-link">
+                                                        <i class="fas fa-times header__cart-mobile-tablet-delete-icon"></i>
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </li>
@@ -296,12 +351,26 @@
                     </div>
                 </div>
             </div> 
+            <ul class="header__sort-bar">
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Liên Quan</a>
+                </li>
+                <li class="header__sort-bar-item header__sort-bar-item--active">
+                    <a href="" class="header__sort-bar-link">Mới Nhất</a>
+                </li>
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Bán Chạy</a>
+                </li>
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Giá</a>
+                </li>
+            </ul>
         </header>
 
         <div class="app__container">
-            <div class="grid">
-                <div class="grid__row app__content">
-                    <div class="grid__column-2">
+            <div class="grid wide">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                      <nav class="category">
                          <h3 class="category__heading">
                              Danh mục
@@ -326,8 +395,8 @@
                      </nav>
                     </div>
      
-                    <div class="grid__column-10">
-                        <div class="home-filter">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter-label">Sắp xếp theo</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -363,9 +432,74 @@
                             </div>
                         </div>
 
+                        <nav class="mobile-category">
+                            <ul class="mobile-category__list">
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Apple </a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Samsung</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Realme</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Oppo</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Xiaomi</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Apple</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Samsung</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Realme</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Oppo</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Xiaomi</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Apple</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Samsung</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Realme</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Oppo</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Xiaomi</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Apple</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Samsung</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Realme</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Oppo</a>
+                                </li>
+                                <li class="mobile-category__item">
+                                    <a href="#" class="mobile-category__link">Điện Thoại Xiaomi</a>
+                                </li>
+                            </ul>
+                        </nav>
+
                         <div class="home-product">
-                            <div class="grid__row">
-                                <div class="grid__column-2-4">
+                            <div class="row sm-gutter">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(data:image/jpeg;base64,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);"></div>
                                         <h3 class="home-product-item__name">
@@ -403,7 +537,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/227731/realme-7-blue-600x600.jpg)"></div>
                                         <h3 class="home-product-item__name">
@@ -441,7 +575,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/221820/xiaomi-redmi-note-9-pro-white-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -479,7 +613,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/194251/samsung-galaxy-s10-lite-xanhduong-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -517,7 +651,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -555,7 +689,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -593,7 +727,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -631,7 +765,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -669,7 +803,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -707,7 +841,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6 ">
                                     <a href="#" class="home-product-item">
                                         <div class="home-product-item__img" style="background-image: url(https://cdn.tgdd.vn/Products/Images/42/231706/nokia-54-xanh-600x600-600x600.jpg);"></div>
                                         <h3 class="home-product-item__name">
@@ -796,14 +930,14 @@
                             </li>
                         </ul>
                     </div>
-               </div>
+               </di6
             </div>
         </div>
 
         <footer class="footer">
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -817,7 +951,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Về F8-Shop</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -831,7 +965,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Đối tác</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -845,7 +979,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi chúng tôi trên</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -868,7 +1002,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng ứng dụng</h3>
                         <div class="footer__dow">
                             <img src="./assets/img/qr code.png" alt="Download QR" class="footer__dow-qr">
@@ -884,29 +1018,6 @@
                         
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                    <div class="footer-bottom-end">
-                        <div class="footer-bottom__nocopyright">
-                            <a href="" class="footer-bottom__link footer-bottom__nocopyright--seperate">
-                                <h3 class="footer-bottom__heading">chính sách bảo mật</h3>
-                            </a>
-                        </div>
-                        <div class="footer-bottom__nocopyright">
-                            <a href="" class="footer-bottom__link footer-bottom__nocopyright--seperate">
-                                <h3 class="footer-bottom__heading">quy chế hoạt động</h3>
-                            </a>
-                        </div>
-                        <div class="footer-bottom__nocopyright">
-                            <a href="" class="footer-bottom__link">
-                                <h3 class="footer-bottom__heading">chính sách trả hàng và hoàn tiền</h3>
-                            </a>
-                        </div>
-                    </div> 
-                    <div class="footer-fisnish">
-                        <h3 class="footer-fisnish__heading">Công ty bán lẻ F8-Shop</h3>
-                        <div class="footer-fisnish__hear">Chi nhánh: 351 Lạc Long Quân, Phường 5, Quận 11, Tp Hồ Chí Minh</div>
-                    </div>
             </div>
         </footer>
     </div>
